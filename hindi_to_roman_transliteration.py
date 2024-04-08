@@ -33,17 +33,17 @@ def hindi_to_roman_transliteration(text="",target_language='en', source_language
 text = 'हाय, कैसे हो भाई?'
 tras = hindi_to_roman_transliteration(text=text,target_language='en', source_language='hi')
 print("---")
-print(tras)
+print(tras) # ('Hi, how are you brother?', 'haay, kaise ho bhaee?')
 print("---")
 
 text = 'ہیلو بھائی کیسے ہیں آپ؟'
 tras = hindi_to_roman_transliteration(text=text,target_language='en', source_language='ur')
 print("---")
-print(tras)
+print(tras) # ('Hello brother how are you?', '')
 print("---")
 
 text = 'こんにちは、お兄さん、お元気ですか？'
 tras = hindi_to_roman_transliteration(text=text,target_language='en', source_language='ja')
 print("---")
-print(tras)
+print(tras) # ('Hello, your brother, how are you?', "Kon'nichiwa, onīsan, ogenkidesuka?")
 print("---")
