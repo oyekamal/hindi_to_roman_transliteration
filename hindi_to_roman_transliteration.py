@@ -14,9 +14,8 @@ driver = webdriver.Chrome(service=s, options=options)
 
 # Setup Chrome driver
 # Navigate to the URL
-text = 'हाय, कैसे हो भाई?'
-def hindi_to_roman_transliteration(text=""):
-    url = f"https://translate.google.com/?sl=hi&tl=en&text={text}&op=translate"
+def hindi_to_roman_transliteration(text="",target_language='en', source_language='hi'):
+    url = f"https://translate.google.com/?sl={source_language}&tl={target_language}&text={text}&op=translate"
     driver.get(url)
 
     # Wait for the page to load and the translation to appear
@@ -31,7 +30,20 @@ def hindi_to_roman_transliteration(text=""):
     # print(translated_text)
     return translated_text, transliteration_text
 
-tras = hindi_to_roman_transliteration(text=text)
+text = 'हाय, कैसे हो भाई?'
+tras = hindi_to_roman_transliteration(text=text,target_language='en', source_language='hi')
+print("---")
+print(tras)
+print("---")
+
+text = 'ہیلو بھائی کیسے ہیں آپ؟'
+tras = hindi_to_roman_transliteration(text=text,target_language='en', source_language='ur')
+print("---")
+print(tras)
+print("---")
+
+text = 'こんにちは、お兄さん、お元気ですか？'
+tras = hindi_to_roman_transliteration(text=text,target_language='en', source_language='ja')
 print("---")
 print(tras)
 print("---")
